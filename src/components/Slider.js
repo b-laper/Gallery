@@ -28,7 +28,21 @@ const useStyles = makeStyles((theme) => ({
       "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)",
   },
 }));
-function onPicClick() {}
+function onPicClick(e) {
+  console.log(e.target.value);
+
+  return (
+    <div
+      style={{
+        backgroundImage: `url(${e.target.value})`,
+        zIndex: "5",
+        width: "700px",
+        height: "500px",
+        display: "inline",
+      }}
+    ></div>
+  );
+}
 export default function Slider() {
   const classes = useStyles();
 
@@ -42,7 +56,7 @@ export default function Slider() {
               alt={image.url}
               key={id}
               style={{ width: "100%", height: "100%" }}
-              onClick={onPicClick}
+              // onClick={onPicClick}
             />
             <GridListTileBar
               classes={{
