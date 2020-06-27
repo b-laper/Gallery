@@ -1,9 +1,9 @@
-export default nextPictureReducer = (state = 0, action) => {
+import { act } from "react-dom/test-utils";
+
+export default (state = [], action) => {
   switch (action.type) {
-    case "MOVE_LEFT":
-      return state - 1;
-    case "MOVE_RIGHT":
-      return state + 1;
+    case "FETCH_PICS":
+      return action.payload;
     default:
       return state;
   }

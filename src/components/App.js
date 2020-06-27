@@ -1,19 +1,14 @@
 import React from "react";
-
 import Background from "./Background";
-import Slider from "./Slider";
-import { createStore, applyMiddleware } from "redux";
-import { Provider } from "react-redux";
-
-const store = createStore(() => [], {}, applyMiddleware());
+import Searchbar from "./Searchbar";
 
 class App extends React.Component {
   render() {
     return (
-      <Provider store={store}>
+      <div>
+        <Searchbar />
         <Background />
-        <Slider />
-      </Provider>
+      </div>
     );
   }
 }
