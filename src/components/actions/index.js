@@ -4,8 +4,9 @@ export const submitSearchInput = (term) => async (dispatch) => {
   const response = await picturesApi.get(`/search/photos`, {
     params: { query: term },
   });
-  console.log(response, term);
-  dispatch({ type: "FETCH_PICS", payload: response.data });
+  console.log(response.data.results);
+
+  dispatch({ type: "FETCH_PICS", payload: response.data.results });
 };
 
 // export const onInputChange = (value) => (dispatch) => {

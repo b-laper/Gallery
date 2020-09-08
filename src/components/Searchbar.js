@@ -47,8 +47,10 @@ class Searchbar extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { pics: state.pics };
-}
+const mapStateToProps = (state) => {
+  return {
+    pics: state.pics,
+  };
+};
 
 export default connect(mapStateToProps, { submitSearchInput })(Searchbar);
