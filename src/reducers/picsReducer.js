@@ -5,7 +5,7 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case "FETCH_PICS":
-      return Object.assign({}, action.payload);
+      return Object.assign({}, state, { pics: action.payload });
     default:
       return state;
   }
