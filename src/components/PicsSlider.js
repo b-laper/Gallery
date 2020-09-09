@@ -52,8 +52,8 @@ function PicsSlider(props) {
 
   return (
     <div className={classes.root}>
-      {/* <GridList className={classes.gridList} cols={2.5}> */}
-      {/* {props.pics.map((pic) => (
+      <GridList className={classes.gridList} cols={2.5}>
+        {props.pics.pics.map((pic) => (
           <GridListTile key={pic.id}>
             <img src={pic.urls.regular} alt={pic.id} />
             <GridListTileBar
@@ -69,8 +69,8 @@ function PicsSlider(props) {
               }
             />
           </GridListTile>
-        ))} */}
-      {/* </GridList> */}
+        ))}
+      </GridList>
     </div>
   );
 }
